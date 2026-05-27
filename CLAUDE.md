@@ -6,10 +6,15 @@
 - **Pengelola**: Arief Rahman Hakim (ASN Dinas Pertanian Kendal)
 - **Lahan**: 500m² pertanian terpadu zero-waste
 
-## Entry Point
+## Entry Point CLI
 ```
-node src/cli.js [perintah]
+node cli/src/cli.js [perintah]
 ```
+
+## Web App (Vercel)
+- Root repo = Next.js app
+- Deploy otomatis via GitHub → Vercel
+- URL: store.agroedulabs.id
 
 ## 6 SKU Produk
 | SKU | Nama | Satuan | Harga Jual |
@@ -30,25 +35,25 @@ node src/cli.js [perintah]
 
 ## Perintah Lengkap
 ```
-node src/cli.js setup           → init sistem
-node src/cli.js bantuan         → semua perintah
-node src/cli.js produk          → katalog + HPP + margin
-node src/cli.js update-hpp      → update komponen HPP
-node src/cli.js stok            → lihat stok semua zona
-node src/cli.js stok-masuk      → catat bahan masuk
-node src/cli.js stok-keluar     → catat keluar internal
-node src/cli.js proses          → catat konversi produksi
-node src/cli.js jual            → catat penjualan
-node src/cli.js pesanan         → lihat pesanan aktif Shopee
-node src/cli.js shopee-order    → input pesanan Shopee
-node src/cli.js shopee-listing  → generate listing Shopee
-node src/cli.js shopee-chat     → template auto-reply
-node src/cli.js riset           → data harga marketplace
-node src/cli.js laporan         → ringkasan hari ini
-node src/cli.js laporan-bulan   → laba/rugi bulanan
-node src/cli.js export          → export CSV
-node src/cli.js checklist       → daily checklist operasional
-node src/cli.js backup          → backup semua JSON
+node cli/src/cli.js setup           → init sistem
+node cli/src/cli.js bantuan         → semua perintah
+node cli/src/cli.js produk          → katalog + HPP + margin
+node cli/src/cli.js update-hpp      → update komponen HPP
+node cli/src/cli.js stok            → lihat stok semua zona
+node cli/src/cli.js stok-masuk      → catat bahan masuk
+node cli/src/cli.js stok-keluar     → catat keluar internal
+node cli/src/cli.js proses          → catat konversi produksi
+node cli/src/cli.js jual            → catat penjualan
+node cli/src/cli.js pesanan         → lihat pesanan aktif Shopee
+node cli/src/cli.js shopee-order    → input pesanan Shopee
+node cli/src/cli.js shopee-listing  → generate listing Shopee
+node cli/src/cli.js shopee-chat     → template auto-reply
+node cli/src/cli.js riset           → data harga marketplace
+node cli/src/cli.js laporan         → ringkasan hari ini
+node cli/src/cli.js laporan-bulan   → laba/rugi bulanan
+node cli/src/cli.js export          → export CSV
+node cli/src/cli.js checklist       → daily checklist operasional
+node cli/src/cli.js backup          → backup semua JSON
 ```
 
 ## Prinsip

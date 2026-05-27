@@ -1,19 +1,18 @@
-# Node
+# Next.js
+.next/
+out/
+.vercel/
+
+# Node modules (root + cli)
 node_modules/
+cli/node_modules/
 web/node_modules/
 web/.next/
-web/out/
-web/.vercel/
-
-# Data lokal (jangan push ke GitHub)
-# data/ — boleh di-push untuk sync web admin (opsional)
 
 # Environment
 .env
 .env.local
-web/.env
-web/.env.local
-web/.env*.local
+.env*.local
 
 # OS
 .DS_Store
@@ -24,8 +23,8 @@ desktop.ini
 *.log
 npm-debug.log*
 
-# Backup lokal
+# Backup lokal (jangan push)
 backups/
 
-# Export
+# Export CSV lokal
 export-kbk-*.csv

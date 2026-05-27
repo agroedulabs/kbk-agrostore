@@ -9,7 +9,8 @@ const path = require('path');
 const readline = require('readline');
 
 // ── Path helpers ─────────────────────────────────────────────
-const ROOT = path.join(__dirname, '..');
+// CLI ada di cli/src/, repo root ada dua level di atas
+const ROOT = path.join(__dirname, '..', '..');
 const DATA = path.join(ROOT, 'data');
 const BACKUPS = path.join(ROOT, 'backups');
 
