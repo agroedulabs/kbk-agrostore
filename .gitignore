@@ -1,0 +1,31 @@
+# Node
+node_modules/
+web/node_modules/
+web/.next/
+web/out/
+web/.vercel/
+
+# Data lokal (jangan push ke GitHub)
+# data/ — boleh di-push untuk sync web admin (opsional)
+
+# Environment
+.env
+.env.local
+web/.env
+web/.env.local
+web/.env*.local
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# Backup lokal
+backups/
+
+# Export
+export-kbk-*.csv

@@ -1,0 +1,101 @@
+{
+  "updated": "Mei 2026",
+  "catatan": "Harga marketplace sebagai benchmark penetapan harga KBK AgroStore",
+  "data": {
+    "KBK-SM": {
+      "produk": "Sekam Mentah",
+      "harga_kompetitor": [
+        {
+          "nama": "Benih Fast Group",
+          "platform": "Tokopedia",
+          "lokasi": "Bekasi",
+          "harga": 15000,
+          "note": "terendah"
+        },
+        {
+          "nama": "Benih Baik Store",
+          "platform": "Tokopedia",
+          "lokasi": "Bekasi",
+          "harga": 17000
+        },
+        {
+          "nama": "Mr.Farmers",
+          "platform": "Tokopedia",
+          "lokasi": "Depok",
+          "harga": 20000
+        },
+        {
+          "nama": "FloraAlam",
+          "platform": "Tokopedia",
+          "lokasi": "Jkt Utara",
+          "harga": 30000,
+          "note": "premium"
+        }
+      ]
+    },
+    "KBK-SB": {
+      "produk": "Sekam Bakar",
+      "harga_kompetitor": [
+        {
+          "nama": "Santri Farming",
+          "platform": "Shopee",
+          "lokasi": "Pangandaran",
+          "harga": 18300,
+          "note": "terendah"
+        },
+        {
+          "nama": "Benih Fast Group",
+          "platform": "Tokopedia",
+          "lokasi": "Bekasi",
+          "harga": 20000
+        },
+        {
+          "nama": "Sahabat Karung",
+          "platform": "Tokopedia",
+          "lokasi": "Jkt Barat",
+          "harga": 26000
+        },
+        {
+          "nama": "Kawan Beras",
+          "platform": "Tokopedia",
+          "lokasi": "Jkt Barat",
+          "harga": 27999
+        }
+      ]
+    },
+    "KBK-KK-M": {
+      "produk": "Kohe Kambing",
+      "harga_kompetitor": [
+        {
+          "nama": "Referensi pabrik",
+          "platform": "Direct",
+          "lokasi": "Salatiga",
+          "harga": 5000,
+          "note": "per kg"
+        },
+        {
+          "nama": "Manggrow Official",
+          "platform": "Tokopedia",
+          "lokasi": "-",
+          "harga": 10000,
+          "note": "1kg fermentasi halus"
+        },
+        {
+          "nama": "Berbagai toko",
+          "platform": "Tokopedia",
+          "lokasi": "-",
+          "harga": 40000,
+          "note": "5kg range 35-45rb"
+        },
+        {
+          "nama": "Berbagai toko",
+          "platform": "Tokopedia",
+          "lokasi": "-",
+          "harga": 75000,
+          "note": "karung 50kg"
+        }
+      ]
+    }
+  },
+  "peringatan": "Harga beli kohe dari peternak lokal Botomulyo BELUM dikonfirmasi. Update setelah survei lapangan."
+}

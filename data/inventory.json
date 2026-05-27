@@ -1,0 +1,38 @@
+{
+  "gudang": {
+    "nama": "Gudang KBK Botomulyo",
+    "alamat": "Botomulyo, Cepiring, Kendal, Jawa Tengah",
+    "luas": "500 m²"
+  },
+  "zona": {
+    "A": {
+      "nama": "Sekam Mentah (bulk)",
+      "items": []
+    },
+    "B": {
+      "nama": "Area Proses Bakar (outdoor)",
+      "items": []
+    },
+    "C": {
+      "nama": "Proses Kohe (pengeringan + fermentasi)",
+      "items": []
+    },
+    "D": {
+      "nama": "Produk Jadi / Ready Ship",
+      "items": []
+    },
+    "E": {
+      "nama": "Alat & Supplies",
+      "items": []
+    }
+  },
+  "stok": {
+    "KBK-SM": 0,
+    "KBK-SB": 0,
+    "KBK-KK-M": 0,
+    "KBK-KK-F1": 0,
+    "KBK-KK-F5": 0,
+    "KBK-MT5": 0
+  },
+  "last_updated": "2026-05-27T13:34:18.309Z"
+}

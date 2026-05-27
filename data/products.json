@@ -1,0 +1,95 @@
+[
+  {
+    "sku": "KBK-SM",
+    "nama": "Sekam Mentah",
+    "satuan": "karung",
+    "harga_jual": 15000,
+    "hpp_components": {
+      "karung": 2000,
+      "label": 200,
+      "tenaga": 500
+    },
+    "deskripsi": "Sekam padi mentah segar dari RMU Cepiring, bersih, kering, siap pakai sebagai media tanam atau bahan campuran.",
+    "berat_bersih_kg": 15,
+    "catatan": "Sekam sangat ringan! 1 karung ±15kg tapi volume besar ~50L"
+  },
+  {
+    "sku": "KBK-SB",
+    "nama": "Sekam Bakar / Arang Sekam",
+    "satuan": "karung",
+    "harga_jual": 22000,
+    "hpp_components": {
+      "bahan_bakar": 2000,
+      "karung": 2000,
+      "label": 200,
+      "tenaga": 1500
+    },
+    "deskripsi": "Arang sekam padi hasil pembakaran terkontrol, warna hitam merata, pH netral, steril, siap campur media tanam.",
+    "berat_bersih_kg": 8,
+    "catatan": "Lebih ringan dari sekam mentah! 1 karung ±8kg"
+  },
+  {
+    "sku": "KBK-KK-M",
+    "nama": "Kohe Kambing Mentah Kering",
+    "satuan": "kg",
+    "harga_jual": 3000,
+    "hpp_components": {
+      "bahan_baku": 1500,
+      "jemur": 300,
+      "karung": 200,
+      "label": 100
+    },
+    "deskripsi": "Kotoran kambing kering alami, dijemur di bawah sinar matahari, bebas bau tajam, kaya N-P-K organik.",
+    "berat_bersih_kg": 1,
+    "catatan": "Harga beli dari peternak lokal Botomulyo masih estimasi, perlu dikonfirmasi"
+  },
+  {
+    "sku": "KBK-KK-F1",
+    "nama": "Kohe Kambing Fermentasi EM4 — 1kg",
+    "satuan": "pack",
+    "harga_jual": 10000,
+    "hpp_components": {
+      "kohe": 2500,
+      "em4": 150,
+      "tenaga": 300,
+      "kemasan": 700,
+      "label": 150
+    },
+    "deskripsi": "Pupuk kandang kambing difermentasi 21 hari dengan EM4, matang sempurna, tidak panas, tidak bau, siap pakai.",
+    "berat_bersih_kg": 1,
+    "catatan": "Pack plastik ziplock 1kg"
+  },
+  {
+    "sku": "KBK-KK-F5",
+    "nama": "Kohe Kambing Fermentasi EM4 — 5kg",
+    "satuan": "pack",
+    "harga_jual": 40000,
+    "hpp_components": {
+      "kohe": 12500,
+      "em4": 700,
+      "tenaga": 1000,
+      "kemasan": 1500,
+      "label": 200
+    },
+    "deskripsi": "Pupuk kandang kambing fermentasi EM4 ekonomis, kemasan 5kg, cocok untuk kebun rumahan atau pot besar.",
+    "berat_bersih_kg": 5,
+    "catatan": "Pack karung mini 5kg"
+  },
+  {
+    "sku": "KBK-MT5",
+    "nama": "Media Tanam Komplit 5kg",
+    "satuan": "pack",
+    "harga_jual": 28000,
+    "hpp_components": {
+      "sekam_bakar": 700,
+      "kohe": 4500,
+      "top_soil": 500,
+      "tenaga": 500,
+      "kemasan": 1500,
+      "label": 200
+    },
+    "deskripsi": "Media tanam siap pakai: campuran arang sekam + kohe fermentasi + top soil pilihan. Gembur, subur, pH ideal 6-7.",
+    "berat_bersih_kg": 5,
+    "catatan": "Komposisi: 40% sekam bakar + 40% kohe fermentasi + 20% top soil"
+  }
+]

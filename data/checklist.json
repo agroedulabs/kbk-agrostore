@@ -1,0 +1,90 @@
+{
+  "daily": [
+    {
+      "id": 1,
+      "waktu": "Pagi",
+      "item": "Cek kondisi gudang (kebersihan, hama, kelembaban)"
+    },
+    {
+      "id": 2,
+      "waktu": "Pagi",
+      "item": "Cek stok produk jadi Zona D — ada yang perlu diisi?"
+    },
+    {
+      "id": 3,
+      "waktu": "Pagi",
+      "item": "Cek notifikasi pesanan Shopee (buka app)"
+    },
+    {
+      "id": 4,
+      "waktu": "Pagi",
+      "item": "Cek fermentasi kohe EM4 — suhu & kelembaban batch aktif"
+    },
+    {
+      "id": 5,
+      "waktu": "Siang",
+      "item": "Proses pesanan Shopee yang masuk — packing & label"
+    },
+    {
+      "id": 6,
+      "waktu": "Siang",
+      "item": "Input pesanan ke sistem: node src/cli.js shopee-order"
+    },
+    {
+      "id": 7,
+      "waktu": "Siang",
+      "item": "Balik/aduk batch kohe fermentasi (jika hari ke 7/14/21)"
+    },
+    {
+      "id": 8,
+      "waktu": "Sore",
+      "item": "Catat penjualan hari ini: node src/cli.js jual"
+    },
+    {
+      "id": 9,
+      "waktu": "Sore",
+      "item": "Cek bahan baku — perlu ambil sekam dari RMU?"
+    },
+    {
+      "id": 10,
+      "waktu": "Sore",
+      "item": "Lihat laporan harian: node src/cli.js laporan"
+    },
+    {
+      "id": 11,
+      "waktu": "Sore",
+      "item": "Backup data: node src/cli.js backup"
+    },
+    {
+      "id": 12,
+      "waktu": "Sore",
+      "item": "Cek chat Shopee — balas pertanyaan pembeli"
+    }
+  ],
+  "weekly": [
+    {
+      "id": 1,
+      "item": "Hitung stok fisik semua produk — cocokkan dengan sistem"
+    },
+    {
+      "id": 2,
+      "item": "Ambil kohe mentah dari peternak lokal Botomulyo (jika stok <20kg)"
+    },
+    {
+      "id": 3,
+      "item": "Mulai batch fermentasi baru jika kohe mentah cukup"
+    },
+    {
+      "id": 4,
+      "item": "Foto produk jadi untuk update listing Shopee"
+    },
+    {
+      "id": 5,
+      "item": "Review harga kompetitor — perlu adjust harga?"
+    },
+    {
+      "id": 6,
+      "item": "Laporan mingguan: node src/cli.js laporan-bulan"
+    }
+  ]
+}
