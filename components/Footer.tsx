@@ -28,29 +28,49 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-hijau-200">
               <li><Link href="/produk/sekam-mentah" className="hover:text-white transition-colors">🌾 Sekam Mentah</Link></li>
               <li><Link href="/produk/sekam-bakar" className="hover:text-white transition-colors">🔥 Arang Sekam</Link></li>
+              <li><Link href="/produk/kohe-mentah" className="hover:text-white transition-colors">🐐 Kohe Mentah</Link></li>
               <li><Link href="/produk/kohe-fermentasi-1kg" className="hover:text-white transition-colors">🧪 Kohe Fermentasi 1kg</Link></li>
               <li><Link href="/produk/kohe-fermentasi-5kg" className="hover:text-white transition-colors">🧪 Kohe Fermentasi 5kg</Link></li>
               <li><Link href="/produk/media-tanam-5kg" className="hover:text-white transition-colors">🌱 Media Tanam 5kg</Link></li>
+              <li><Link href="/produk/pupuk-azolla-500g" className="hover:text-white transition-colors">🌿 Pupuk Azolla</Link></li>
             </ul>
           </div>
 
           {/* Kontak */}
           <div>
-            <h3 className="font-semibold mb-3 text-hijau-100">Lokasi & Kontak</h3>
+            <h3 className="font-semibold mb-3 text-hijau-100">Lokasi &amp; Kontak</h3>
             <div className="text-sm text-hijau-200 space-y-2">
               <p>📍 Botomulyo, Cepiring<br />Kendal, Jawa Tengah</p>
-              <p>🛒 Pemesanan via <a href="https://shopee.co.id" target="_blank" rel="noopener" className="underline hover:text-white">Shopee KBK AgroStore</a></p>
+              <p>
+                💬 WhatsApp:{" "}
+                <a
+                  href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER ?? "628XXXXXXXXXX"}`}
+                  target="_blank"
+                  rel="noopener"
+                  className="underline hover:text-white"
+                >
+                  {process.env.NEXT_PUBLIC_WA_DISPLAY ?? "0812-XXXX-XXXX"}
+                </a>
+              </p>
               <p>📧 agroedulabs@gmail.com</p>
             </div>
-            <div className="mt-4">
-              <Link
+            <div className="mt-4 flex flex-wrap gap-2">
+              <a
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER ?? "628XXXXXXXXXX"}?text=${encodeURIComponent("Assalamu'alaikum, saya mau tanya produk KBK AgroStore 🌿")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors"
+              >
+                💬 Chat WhatsApp
+              </a>
+              <a
                 href="https://shopee.co.id"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors"
               >
-                🛒 Buka Toko Shopee
-              </Link>
+                🛒 Shopee
+              </a>
             </div>
           </div>
         </div>

@@ -23,7 +23,10 @@ export interface Product {
   cara_pakai: string[];
   catatan?: string;
   tersedia: boolean;
-  shopee_url: string; // update setelah listing live
+  shopee_url: string;
+  whatsapp_number: string;
+  min_order: number;
+  foto_url: string;
 }
 
 // ── Helper ────────────────────────────────────────────────────
@@ -34,6 +37,8 @@ function calcHPP(c: HppComponent) {
 function rp(n: number): string {
   return "Rp " + n.toLocaleString("id-ID");
 }
+
+const WA = process.env.NEXT_PUBLIC_WA_NUMBER ?? "628XXXXXXXXXX";
 
 // ── Data Produk ───────────────────────────────────────────────
 const RAW = [
@@ -69,19 +74,23 @@ const RAW = [
     catatan: "⚠️ Sekam sangat ringan! 1 karung ≈ 15 kg namun bervolume besar (~50 liter)",
     tersedia: true,
     shopee_url: "https://shopee.co.id",
+    whatsapp_number: WA,
+    min_order: 1,
+    foto_url: "",
   },
   {
     sku: "KBK-SB",
     slug: "sekam-bakar",
-    nama: "Arang Sekam / Sekam Bakar",
-    nama_pendek: "Sekam Bakar",
+    nama: "Arang Sekam — Sekam Bakar Premium",
+    nama_pendek: "Arang Sekam",
     satuan: "karung",
     harga_jual: 22000,
     hpp_components: { bahan_bakar: 2000, karung: 2000, label: 200, tenaga: 1500 },
     berat_kg: 8,
     emoji: "🔥",
     zona: "Zona B",
-    deskripsi_pendek: "Dibakar terkontrol — hitam merata, steril, pH netral. Siap campur.",
+    deskripsi_pendek:
+      "Media tanam ringan dan porous — bikin akar tanaman lebih napas, anti becek, anti busuk.",
     deskripsi_panjang:
       "Arang sekam hasil pembakaran terkontrol dari sekam padi pilihan. " +
       "Warna hitam merata menandakan pembakaran sempurna — tidak gosong, tidak mentah. " +
@@ -102,6 +111,9 @@ const RAW = [
     catatan: "⚠️ Lebih ringan dari sekam mentah. 1 karung ≈ 8 kg (~40 liter)",
     tersedia: true,
     shopee_url: "https://shopee.co.id",
+    whatsapp_number: WA,
+    min_order: 1,
+    foto_url: "",
   },
   {
     sku: "KBK-KK-M",
@@ -130,9 +142,12 @@ const RAW = [
       "Pupuk dasar: taburkan 2–3 kg per m² sebelum tanam",
       "Atau gunakan sebagai bahan fermentasi EM4",
     ],
-    catatan: "💡 Tersedia dalam kemasan karung, minimum pembelian 5 kg",
+    catatan: "💡 Minimum pembelian 5 kg. Hubungi kami via WhatsApp untuk konfirmasi stok.",
     tersedia: true,
     shopee_url: "https://shopee.co.id",
+    whatsapp_number: WA,
+    min_order: 5,
+    foto_url: "",
   },
   {
     sku: "KBK-KK-F1",
@@ -164,8 +179,12 @@ const RAW = [
       "Bedengan/kebun: 2–3 kg per m² per musim tanam",
       "Pupuk cair: larutkan 1:10 dengan air, semprot/siram",
     ],
+    catatan: "💡 Simpan di tempat sejuk, hindari paparan sinar matahari langsung.",
     tersedia: true,
     shopee_url: "https://shopee.co.id",
+    whatsapp_number: WA,
+    min_order: 1,
+    foto_url: "",
   },
   {
     sku: "KBK-KK-F5",
@@ -194,8 +213,12 @@ const RAW = [
       "Tanaman buah: 3–5 kg per pohon per musim",
       "Campuran media tanam: 40% kohe + 40% arang sekam + 20% tanah",
     ],
+    catatan: "💡 Simpan di tempat sejuk dan kering. Hindari kontak langsung dengan air hujan.",
     tersedia: true,
     shopee_url: "https://shopee.co.id",
+    whatsapp_number: WA,
+    min_order: 1,
+    foto_url: "",
   },
   {
     sku: "KBK-MT5",
@@ -215,7 +238,8 @@ const RAW = [
     berat_kg: 5,
     emoji: "🌱",
     zona: "Zona D",
-    deskripsi_pendek: "Formula KBK: 40% arang sekam + 40% kohe + 20% top soil. Langsung tanam.",
+    deskripsi_pendek:
+      "Formula KBK: 40% arang sekam + 40% kohe + 20% top soil. Langsung tanam.",
     deskripsi_panjang:
       "Media tanam siap pakai hasil racikan KBK AgroEduLabs. " +
       "Formula terukur: 40% arang sekam (aerasi & drainase), " +
@@ -238,6 +262,93 @@ const RAW = [
     ],
     tersedia: true,
     shopee_url: "https://shopee.co.id",
+    whatsapp_number: WA,
+    min_order: 1,
+    foto_url: "",
+  },
+  {
+    sku: "KBK-AZ5",
+    slug: "pupuk-azolla-500g",
+    nama: "Pupuk Azolla Organik — 500 g",
+    nama_pendek: "Azolla 500g",
+    satuan: "pack",
+    harga_jual: 10000,
+    hpp_components: {
+      bahan_baku: 1500,
+      jemur: 300,
+      kemasan: 700,
+      label: 200,
+      tenaga: 800,
+    },
+    berat_kg: 0.5,
+    emoji: "🌿",
+    zona: "Zona C",
+    deskripsi_pendek:
+      "Azolla kering dari kolam KBK — kaya nitrogen alami, cocok untuk padi, sayuran, dan tanaman pot.",
+    deskripsi_panjang:
+      "Azolla pinnata dibudidayakan di kolam KBK AgroEduLabs, dipanen segar lalu dikeringkan " +
+      "alami di bawah sinar matahari. Azolla mengandung Nitrogen (N) 3–5% bobot kering — " +
+      "lebih tinggi dari banyak pupuk hijau lainnya — serta P, K, Ca, dan Mg alami. " +
+      "Sebagai pupuk hijau yang dikeringkan, Azolla terurai cepat di tanah dan langsung " +
+      "melepaskan nutrisinya. Cocok untuk sayuran, padi, dan tanaman dalam pot.",
+    manfaat: [
+      "Kandungan N 3–5% — setara urea organik untuk sayuran",
+      "Mengandung P, K, Ca, Mg dari bahan alami",
+      "Terurai cepat — nutrisi tersedia dalam 7–14 hari",
+      "Aman untuk tanaman pangan, 100% bebas kimia",
+      "Meningkatkan aktivitas mikroba tanah",
+    ],
+    cara_pakai: [
+      "Taburkan 50–100 g per m² bedengan, campur ringan ke tanah",
+      "Pot besar: 1–2 sendok makan per minggu di permukaan",
+      "Rendam 1 genggam dalam 1 liter air 24 jam → pupuk cair",
+      "Campur ke kompos sebagai akselerator nitrogen alami",
+    ],
+    catatan: "💡 Simpan di tempat kering dan sejuk. Hindari paparan kelembaban tinggi.",
+    tersedia: true,
+    shopee_url: "https://shopee.co.id",
+    whatsapp_number: WA,
+    min_order: 1,
+    foto_url: "",
+  },
+  {
+    sku: "KBK-BT",
+    slug: "bibit-kbk",
+    nama: "Bibit Sayuran & Tanaman KBK",
+    nama_pendek: "Bibit KBK",
+    satuan: "polybag",
+    harga_jual: 15000,
+    hpp_components: { benih: 3000, polybag: 1000, media: 500, tenaga: 1500, label: 200 },
+    berat_kg: 0.3,
+    emoji: "🌱",
+    zona: "Zona D",
+    deskripsi_pendek:
+      "Bibit tanaman dari kebun KBK — sayuran, herbal, dan tanaman produktif pilihan. Segera hadir.",
+    deskripsi_panjang:
+      "KBK AgroEduLabs sedang menyiapkan lini bibit tanaman lokal unggul: " +
+      "sayuran konsumsi (cabai, tomat, terong, kangkung), herbal (kemangi, jahe, kunyit), " +
+      "dan tanaman produktif lainnya yang cocok untuk kebun rumah di iklim Jawa Tengah. " +
+      "Semua bibit disemai dari benih pilihan, diperkuat dengan media tanam KBK sendiri, " +
+      "dan dirawat organik tanpa pestisida kimia. " +
+      "Hubungi kami via WhatsApp untuk daftar bibit yang sedang tersedia.",
+    manfaat: [
+      "Bibit lokal — terbiasa iklim Kendal dan sekitarnya",
+      "Disemai organik tanpa pupuk kimia",
+      "Siap tanam dalam polybag atau pot",
+      "Tersedia edukasi cara rawat dari tim KBK",
+    ],
+    cara_pakai: [
+      "Siram 1–2 kali sehari, hindari genangan",
+      "Taruh di tempat dengan sinar matahari minimal 4 jam",
+      "Pindah tanam ke lahan setelah tinggi 15–20 cm",
+      "Gunakan Media Tanam KBK-MT5 untuk hasil terbaik",
+    ],
+    catatan: "📅 Stok bibit bersifat musiman. Hubungi WhatsApp untuk ketersediaan terkini.",
+    tersedia: false,
+    shopee_url: "https://shopee.co.id",
+    whatsapp_number: WA,
+    min_order: 1,
+    foto_url: "",
   },
 ];
 
@@ -258,4 +369,28 @@ export function getProduct(slug: string): Product | undefined {
 
 export function rpFormat(n: number): string {
   return rp(n);
+}
+
+export function generateWhatsAppURL(product: Product, qty: number): string {
+  const safeQty = Math.max(qty, product.min_order);
+  const totalHarga = safeQty * product.harga_jual;
+  const number = product.whatsapp_number.replace(/\D/g, "");
+
+  const lines = [
+    "Assalamu'alaikum, Kak Arief 🌿",
+    "",
+    "Saya ingin pesan produk KBK AgroStore:",
+    "",
+    `📦 Produk : ${product.nama}`,
+    `🔖 SKU    : ${product.sku}`,
+    `🔢 Jumlah : ${safeQty} ${product.satuan}`,
+    `💰 Total  : ${totalHarga.toLocaleString("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 })}`,
+    "",
+    "Mohon konfirmasi ketersediaan stok dan info pengiriman.",
+    "Terima kasih 🙏",
+    "",
+    "_(Pesan dari: store.agroedulabs.id)_",
+  ];
+
+  return `https://wa.me/${number}?text=${encodeURIComponent(lines.join("\n"))}`;
 }
